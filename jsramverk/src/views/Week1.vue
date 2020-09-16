@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="center indigo--text">Week 1</h1>
-    <h2>Github repo <a href="https://www.github.com"> here</a></h2>
+    <h2>Github repo <a href="https://github.com/Hatooz/jsramverk"> here</a></h2>
 <br>   
 
 <h2>Project setup</h2> 
