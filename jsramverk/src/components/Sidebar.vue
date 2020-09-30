@@ -7,7 +7,7 @@
           :mini-variant="miniVariant"
           :right="right"
           :permanent="permanent"
-          :src="bg"
+          
           absolute
           dark
         >
@@ -79,6 +79,8 @@ export default {
       drawer: true,
       itemsMain: [
         { title: 'Home', icon: 'mdi-view-dashboard', link: "/"},
+        { title: 'Register', icon: 'mdi-view-dashboard', link: "/register"},
+        { title: 'Login', icon: 'mdi-view-dashboard', link: "/login"},
       ],
       items: [
         { title: 'Week 1', icon: 'mdi-view-dashboard', link: "/reports/week/1"},

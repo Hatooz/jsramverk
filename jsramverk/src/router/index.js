@@ -19,8 +19,28 @@ const routes = [
         path: '1',
         name: '1',
         component: () => import('../views/Week1.vue'),
+      },
+      {
+        path: '2',
+        name: '2',
+        component: () => import('../views/Week2.vue'),
       }
     ]
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/Register.vue')    
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/Login.vue')    
+  },
+  {
+    path: '/redovisning',
+    name: 'Redovisning',
+    component: () => import('../views/Redovisning.vue')    
   }
   // {
   //   path: '/reports',
