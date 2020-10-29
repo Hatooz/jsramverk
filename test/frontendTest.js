@@ -18,7 +18,7 @@ test.describe("Multipage", function() {
         browser = new webdriver.Builder().
             withCapabilities(webdriver.Capabilities.firefox()).build();
 
-        browser.get("http://google.com");
+        browser.get("http://localhost:8080");
         done();
     });
 
