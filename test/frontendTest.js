@@ -1,3 +1,10 @@
+/**
+ * Test for getting started with Selenium.
+ */
+"use strict";
+
+
+
 const assert = require("assert");
 const test = require("selenium-webdriver/testing");
 const webdriver = require("selenium-webdriver");
@@ -9,20 +16,41 @@ let browser;
 
 // Does not work with WSL!! Use cygwin
 
+function goToNavLink(target) {
+    browser.findElement(By.linkText(target)).then(function(element) {
+        element.click();
+    });
+}
+
+function matchUrl(target) {
+    browser.getCurrentUrl().then(function(url) {
+        assert.ok(url.endsWith("/" + target));
+    });
+}
+
+function assertH1(target) {
+    browser.findElement(By.css("h1")).then(function(element) {
+        element.getText().then(function(text) {
+            assert.equal(text, target);
+        });
+    });
+}
+
 
 
 // Test suite
 test.describe("Multipage", function() {
+
+    this.timeout(0);
+
     beforeEach(function(done) {
-        this.timeout(20000);
         browser = new webdriver.Builder()
             .withCapabilities(webdriver.Capabilities.firefox())
             .setFirefoxOptions(new firefox.Options().headless())
             .forBrowser('firefox')
             .build();
-            
 
-        browser.get("http://localhost:8080");
+        browser.get("http://localhost:8082/");
         done();
     });
 
@@ -32,28 +60,34 @@ test.describe("Multipage", function() {
     });
 
 
-    function goToNavLink(target) {
-        browser.findElement(By.linkText(target)).then(function(element) {
-            element.click();
+    // Test case
+    test.it("Test index", function(done) {
+        let promise = browser.getTitle();
+
+        promise.then(function(title) {
+            assert.equal(title, "JSRamverk");
         });
-    }
 
-    function matchUrl(target) {
-        browser.getCurrentUrl().then(function(url) {
-            assert.ok(url.endsWith("/" + target));
+        browser.getTitle().then(function(title) {
+            assert.equal(title, "JSRamverk");
         });
-    }
+
+        assertH1("Home");
+        matchUrl("/");
+
+        done();
+    });
 
 
-    test.it("Test go to Home", function(done) {
+
+    test.it("Test go to register", function(done) {
         // try use nav link
-        goToNavLink("Register")
+        goToNavLink("Register");
+
+        assertH1("Register");
         matchUrl("register" );
-        done()
 
-        // assertH1("Register");
-
-        // done();
+        done();
     });
 
 })
