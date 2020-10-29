@@ -72,8 +72,8 @@ test.describe("Multipage", function() {
             assert.equal(title, "jsramverk");
         });
 
-        assertH1("Home");
-        matchUrl("/");
+        assertH1("JSRamverk");
+        // matchUrl("/");
 
         done();
     });
@@ -82,9 +82,9 @@ test.describe("Multipage", function() {
 
     test.it("Test go to register", function(done) {
         // try use nav link
-        goToNavLink("register");
+        goToNavLink("Register");
 
-        assertH1("Register");
+        assertH1("JSRamverk");
         matchUrl("register" );
 
         done();
