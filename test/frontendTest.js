@@ -65,11 +65,11 @@ test.describe("Multipage", function() {
         let promise = browser.getTitle();
 
         promise.then(function(title) {
-            assert.equal(title, "JSRamverk");
+            assert.equal(title, "jsramverk");
         });
 
         browser.getTitle().then(function(title) {
-            assert.equal(title, "JSRamverk");
+            assert.equal(title, "jsramverk");
         });
 
         assertH1("Home");
@@ -82,7 +82,7 @@ test.describe("Multipage", function() {
 
     test.it("Test go to register", function(done) {
         // try use nav link
-        goToNavLink("Register");
+        goToNavLink("register");
 
         assertH1("Register");
         matchUrl("register" );
