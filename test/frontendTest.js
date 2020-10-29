@@ -15,10 +15,14 @@ let browser;
 test.describe("Multipage", function() {
     test.beforeEach(function(done) {
         this.timeout(20000);
-        browser = new webdriver.Builder().
-            withCapabilities(webdriver.Capabilities.firefox()).build();
+        browser = new webdriver.Builder()
+            .withCapabilities(webdriver.Capabilities.firefox())
+            .setFireFoxOptions(new firefox.Options().headless())
+            .forBrowser('firefox')
+            .build();
+            
 
-        browser.get("http://localhost:8080");
+        browser.get("http://localhost:8082");
         done();
     });
 
@@ -43,12 +47,13 @@ test.describe("Multipage", function() {
 
     test.it("Test go to Home", function(done) {
         // try use nav link
-        goToNavLink("Register");
+        goToNavLink("Register").then(() => {
+            matchUrl("register" );
+        }).then(() => done())
 
         // assertH1("Register");
-        matchUrl("register" );
 
-        done();
+        // done();
     });
 
 })
