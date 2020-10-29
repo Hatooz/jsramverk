@@ -1,4 +1,3 @@
-
 const assert = require("assert");
 const test = require("selenium-webdriver/testing");
 const webdriver = require("selenium-webdriver");
@@ -17,7 +16,7 @@ test.describe("Multipage", function() {
         this.timeout(20000);
         browser = new webdriver.Builder()
             .withCapabilities(webdriver.Capabilities.firefox())
-            .setFireFoxOptions(new firefox.Options().headless())
+            .setFirefoxOptions(new firefox.Options().headless())
             .forBrowser('firefox')
             .build();
             
