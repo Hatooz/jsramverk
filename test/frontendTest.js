@@ -13,16 +13,16 @@ let browser;
 
 // Test suite
 test.describe("Multipage", function() {
-    test.beforeEach(function(done) {
+    beforeEach(function(done) {
         this.timeout(20000);
         browser = new webdriver.Builder().
             withCapabilities(webdriver.Capabilities.firefox()).build();
 
-        browser.get("http://localhost:8080/#/");
+        browser.get("http://google.com");
         done();
     });
 
-    test.afterEach(function(done) {
+    afterEach(function(done) {
         browser.quit();
         done();
     });
