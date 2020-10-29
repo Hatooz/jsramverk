@@ -47,9 +47,9 @@ test.describe("Multipage", function() {
 
     test.it("Test go to Home", function(done) {
         // try use nav link
-        goToNavLink("Register").then(() => {
-            matchUrl("register" );
-        }).then(() => done())
+        goToNavLink("Register")
+        matchUrl("register" );
+        done()
 
         // assertH1("Register");
 
