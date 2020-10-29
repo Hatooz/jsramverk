@@ -9,9 +9,11 @@ sudo: false
 
 git:
     submodules: false
-
+env:
+  global:
+    - MOZ_HEADLESS=1
 addons:  
-  firefox: latest -headless
+  firefox: latest
 
 install:  
     - wget -N https://github.com/mozilla/geckodriver/releases/download/v0.22.0/geckodriver-v0.22.0-linux64.tar.gz -P ~/
