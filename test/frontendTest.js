@@ -13,7 +13,7 @@ let browser;
 
 // Test suite
 test.describe("Multipage", function() {
-    beforeEach(function(done) {
+    test.beforeEach(function(done) {
         this.timeout(20000);
         browser = new webdriver.Builder().
             withCapabilities(webdriver.Capabilities.firefox()).build();
@@ -22,7 +22,7 @@ test.describe("Multipage", function() {
         done();
     });
 
-    afterEach(function(done) {
+    test.afterEach(function(done) {
         browser.quit();
         done();
     });
