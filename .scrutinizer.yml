@@ -6,7 +6,8 @@ build:
         - npm install
         - npm run build
         override:
-          - command: npm test
+          - 
+            command: npm test
             coverage:
-              file: coverage/clover.xml
-              format: clover
+              file: 'tests/clover.xml'
+              format: 'clover'

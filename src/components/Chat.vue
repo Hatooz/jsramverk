@@ -56,6 +56,9 @@ export default {
     this.socket.on("connect", function() {
       console.log("connected!")
     }),
+    this.socket.on('restore', data => {
+      data.forEach(message => this.allMessages.push(message));
+    })
     this.socket.on('message', message => {
       this.allMessages.push(message);
     })
