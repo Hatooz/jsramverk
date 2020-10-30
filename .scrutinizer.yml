@@ -2,9 +2,9 @@ build:
   nodes:
     coverage:
       tests:
-      before:
-      - npm install
-      - npm run build
+        before:
+        - npm install
+        - npm run build
         override:
           - command: npm test
             coverage:
