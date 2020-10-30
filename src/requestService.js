@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const url = 'http://localhost:1338/'
-// const url = 'https://me-api.elbizza.me/'
+// const url = 'http://localhost:1337/'
+const url = 'https://me-api.elbizza.me/'
 
 class infoService {
     static async getInfo() {        

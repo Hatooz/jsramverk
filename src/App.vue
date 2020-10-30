@@ -57,9 +57,6 @@ export default {
     Sidebar,
   },
 
-  data: () => ({
-    //
-  }),
 };
 </script>
 
