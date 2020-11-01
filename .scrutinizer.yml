@@ -9,5 +9,5 @@ build:
           - 
             command: npm test
             coverage:
-              file: 'tests/clover.xml'
+              file: 'coverage/clover.xml'
               format: 'clover'
