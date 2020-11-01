@@ -90,4 +90,14 @@ test.describe("Multipage", function() {
         done();
     });
 
+    test.it("Test go to week1", function(done) {
+        // try use nav link
+        goToNavLink("Week 1");
+
+        assertH1("JSRamverk");
+        matchUrl("reports/week/1");
+
+        done();
+    });
+
 })
