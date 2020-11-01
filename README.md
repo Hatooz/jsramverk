@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/Hatooz/jsramverk.svg?branch=master)](https://travis-ci.com/Hatooz/jsramverk)
 # jsramverk
 
 ## Project setup
