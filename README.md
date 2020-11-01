@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/Hatooz/jsramverk.svg?branch=master)](https://travis-ci.com/Hatooz/jsramverk)
+[![Build Status](https://travis-ci.com/Hatooz/jsramverk.svg?branch=master)](https://travis-ci.com/Hatooz/jsramverk) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Hatooz/jsramverk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Hatooz/jsramverk/?branch=master)
 # jsramverk
 
 ## Project setup
