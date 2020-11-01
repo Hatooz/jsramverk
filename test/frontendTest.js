@@ -85,7 +85,7 @@ test.describe("Multipage", function() {
         goToNavLink("Register");
 
         assertH1("JSRamverk");
-        matchUrl("register" );
+        matchUrl("register");
 
         done();
     });

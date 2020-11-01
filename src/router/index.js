@@ -30,6 +30,11 @@ const routes = [
         path: '2',
         name: '2',
         component: () => import('../views/Week2.vue'),
+      },
+      {
+        path: '3',
+        name: '3',
+        component: () => import('../views/Week3.vue'),
       }
     ]
   },

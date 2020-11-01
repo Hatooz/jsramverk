@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <h1>Kursmoment 2</h1><br>
-    <p v-html="info.repo"></p>
-    <p v-html="info.setup"></p>    
+    <p v-html="info.kmom"></p>
+    <p v-html="info.redovisning"></p>    
 <v-btn
       color="indigo"
       class="white--text"

@@ -48,7 +48,7 @@ export default {
   },
   methods: {
       async postRedovisning() {
-         this.success = await requestService.postRedovisning(this.kmom, this.redovisning);
+         this.success = await requestService.editRedovisning(this.kmom, this.redovisning);
       }
   },
 }

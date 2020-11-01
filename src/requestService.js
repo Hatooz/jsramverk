@@ -42,6 +42,7 @@ class infoService {
                 }
             });
             const data = await res.data;
+            console.log(data)
             
             return data;
         } catch (error) {
@@ -50,6 +51,7 @@ class infoService {
     }
     static async postRedovisning(kmom, redovisning) {
         const access_token = localStorage.getItem('token')
+        console.log(access_token)
         return axios.post(`${url}reports`, {
             kmom,
             redovisning

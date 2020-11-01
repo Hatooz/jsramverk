@@ -1,15 +1,16 @@
 <template>
   <div class="container">
-    <h1>Kursmoment 1</h1><br>
+    <h1>Kursmoment 3</h1><br>
     <p v-html="info.kmom"></p>
     <p v-html="info.redovisning"></p>    
- <v-btn
+<v-btn
       color="indigo"
       class="white--text"
       @click="edit"
     >
     Edit Text
  </v-btn>
+
   </div>
 </template>
 <script>
@@ -18,7 +19,7 @@ export default {
   name: 'Week1Component', 
   data() {
     return {
-      weekNumber: 1,
+      weekNumber: 3,
       info:''
     }
   },
