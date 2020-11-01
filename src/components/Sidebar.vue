@@ -86,6 +86,7 @@ export default {
         { title: 'Week 1', icon: 'mdi-view-dashboard', link: "/reports/week/1"},
         { title: 'Week 2', icon: 'mdi-image', link: "/reports/week/2" },
         { title: 'Week 3', icon: 'mdi-help-box', link: "/reports/week/3"},
+        { title: 'Week 4', icon: 'mdi-help-box', link: "/reports/week/4"},
       ],
       color: 's',
       colors: [
