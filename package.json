@@ -1,6 +1,6 @@
 {
   "name": "jsramverk",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "private": true,
   "scripts": {
     "start": "node node_modules/http-server/bin/http-server -p 8082 dist",
